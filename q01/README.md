@@ -18,3 +18,8 @@
     How many years will you live?:100
      5:35:38.813720
 
+テストするにはnosetestsが必要です。
+
+    $ pip install nose
+    nosetests
+
