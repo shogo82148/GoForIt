@@ -1,0 +1,37 @@
+\documentclass{jsarticle}
+
+\title{人生の時計}
+\author{Ichinose Shogo}
+
+\begin{document}
+\maketitle
+
+\section{アルゴリズムの説明}
+一生を一日に例えた場合の午前0時からの経過時間を以下の式を使って求めます。
+\[
+\textrm{1日に例えた場合の0時からの経過時間[日]} = \frac{\textrm{現在時刻}-\textrm{誕生日}}{\textrm{亡くなる時刻}-\textrm{誕生日}}
+\]
+
+日時の計算および、経過時間を何時何分何秒の形式に変換するのには、Pythonの標準モジュールであるdatetimeを使用しました。
+
+\section{動作方法}
+実行にはPythonが必要です。追加モジュールは必要ありません。
+
+実行すると生まれた年、月、日、生きることのできる年齢を標準入力から入力すると、一生を24時間に例えた時の時刻が表示されます。
+
+\section{出力例}
+以下に出力例を示します。最後の行がプログラムからの出力で、他は入力です。
+\begin{verbatim}
+    $ python q01.py
+    Birth Year?:1988
+    Birth Month?:10
+    Birth Day?:17
+    How many years will you live?:100
+     5:35:38.813720
+\end{verbatim}
+
+\section{ライセンス}
+著作権はIchinose Shogoが保有します。
+MITライセンスにしたがって配布します。
+
+\end{document}

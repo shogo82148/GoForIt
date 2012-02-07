@@ -1,2 +1,9 @@
 *.pyc
 *~
+.omakedb
+.omakedb.lock
+*.omc
+*.aux
+*.dvi
+*.log
+*.pdf
