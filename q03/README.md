@@ -25,6 +25,8 @@
 1. 実行速度にこだわらず、読みやすいように書いてください。
 2. アルゴリズムの工夫により、さらに高速化したものを書いてください。。
 
+[Go For It 暗号検索の高速化](http://www.sony.co.jp/SonyInfo/Jobs/newgrads/sus/q03.html)より
+
 ## 実行方法
 実行にはPythonとC++が必要です。
 
