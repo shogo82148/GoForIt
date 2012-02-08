@@ -1,0 +1,46 @@
+\documentclass{jsarticle}
+
+\title{実数の階乗}
+\author{Ichinose Shogo}
+
+\begin{document}
+\maketitle
+
+\section{アルゴリズムの説明}
+階乗はガンマ関数$\Gamma (x) = \int_0^\infty e^{-t}t^{x-1}dt$を用いて$x!=\Gamma (x+1)$と複素数に拡張することができます。
+ガンマ関数の計算には、以下の漸近展開式を用いました。
+
+\[
+\log \Gamma (x) = (x-\frac{1}{2})\log x - x \frac{1}{2}\log 2\pi + \sum_{n=1}^\infty \frac{B_{2n}}{2n(2n-1)x^{2n-1}}
+\]
+ここで$B_n$はBernoulli数です。
+
+$x$が負の場合は、
+\[
+\Gamma (x) \Gamma(1-x) = \pi / \sin \pi x
+\]
+を使用しています。
+
+実際のプログラムは「奥村晴彦著 C言語による最新アルゴリズム事典」を参考にしました。
+
+\section{動作方法}
+標準入力から入力された実数の階乗を標準出力に出力します。
+0を入力すると終了します。
+
+\section{出力例}
+以下に入出力例を示します。
+\begin{verbatim}
+    $ python q02.py
+    5
+    120.0
+    3.32335097045
+    -1.9
+    -10.5705641096
+    0
+\end{verbatim}
+
+\section{ライセンス}
+著作権はIchinose Shogoが保有します。
+MITライセンスにしたがって配布します。
+
+\end{document}
