@@ -1,0 +1,48 @@
+\documentclass{jsarticle}
+
+\title{暗号検索の高速化}
+\author{Ichinose Shogo}
+
+\begin{document}
+\maketitle
+
+\section{アルゴリズムの説明}
+
+\begin{enumerate}
+\item キーワードの先頭と末尾の文字をランダム文字列から検索し、位置を記憶します。\\
+	$w$をキーワード、$r$をランダム文字列、$n=|w|$とした時、先頭位置$h$と末尾位置$t$を計算します。
+	\begin{eqnarray*}
+		H &=& \{ i | r_i = w_0 \} \\
+		T &=& \{ i | r_i = w_{n-1} \}
+	\end{eqnarray*}
+\item 全ての先頭位置と末尾位置の組み合わせ($(t,h) \in H \times T$)について、正解かどうかを確かめます。
+	$s = (t-h) / (n-1)$ とした時、すべての$i(0 \le i < n)$ について $r_{h+si} = w_i$ であれば、正解一覧に追加します。
+\item 正解だとわかった組み合わせを、スキップ数にソートし、出力します。
+\end{enumerate}
+ステップ2で組み合わせを作る際、位置 mod (キーワードの長さ-1) が等しいもの同士のみで組み合わせる事によって、
+候補数を削減します。
+
+\section{動作方法}
+キーワードを引数として渡すと、
+標準入力から入力された文字列から、キーワードを探して、
+見つかった位置を標準出力に出力します。
+
+\section{出力例}
+以下に入出力例を示します。
+\begin{verbatim}
+$ g++ -o q03 q03.cpp
+$ python random_string.py > random.txt
+$ ./q03 sony < random.txt > result.txt
+1,118641
+2,146003
+2,235908
+2,284065
+3,288544
+...
+\end{verbatim}
+
+\section{ライセンス}
+著作権はIchinose Shogoが保有します。
+MITライセンスにしたがって配布します。
+
+\end{document}
