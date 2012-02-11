@@ -28,6 +28,18 @@
 [Go For It 暗号検索の高速化](http://www.sony.co.jp/SonyInfo/Jobs/newgrads/sus/q03.html)より
 
 ## 実行方法
+
+### i
+Pythonで、実行速度にこだわらず、読みやすいように書いたものです。
+実行にはPythonが必要です。
+
+    $ python random_string.py > random.txt
+    $ python q03_simple.py sony < random.txt > result.txt
+    $ diff answer.txt result.txt
+
+
+### ii
+C++で書きなおして、高速に動作するようにしたものです。
 実行にはPythonとC++が必要です。
 
     $ g++ -o q03 q03.cpp
