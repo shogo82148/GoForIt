@@ -1,0 +1,43 @@
+\documentclass{jsarticle}
+
+\title{旋律に隠された特徴}
+\author{Ichinose Shogo}
+
+\begin{document}
+\maketitle
+
+\section{アルゴリズムの説明}
+旋律中のすべての音符に対し、
+「ABS(今着目している音符の音の高さ-一つ前の音符の音の高さ)+今着目している音符の長さ/一つ前の音符の長さ-1」
+を計算し、総和を求めます。その計算結果の整数部を特徴量としました。
+
+\section{動作方法}
+動作にはPython2.xが必要です。
+
+\section{出力例}
+以下に入出力例を示します。
+\begin{verbatim}
+$ python q04.py
+i)
+A 20
+B 22
+C 20
+
+ii)
+D 22
+E 28
+F 21
+D has same feature to B
+
+iii)
+G 57
+result:
+-2:1:,14:1:,-2:0.:
+Feature 57
+\end{verbatim}
+
+\section{ライセンス}
+著作権はIchinose Shogoが保有します。
+MITライセンスにしたがって配布します。
+
+\end{document}

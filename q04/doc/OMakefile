@@ -1,0 +1,16 @@
+LATEX = platex
+TETEX2_ENABLED = false
+LATEXFLAGS = -kanji=utf-8
+DVIPS = dvipsk
+DVIPSFLAGS = -t a4 -Ppdf -z
+DVIPDFMFLAGS = -p a4
+PS2PDF = ps2pdf.bat
+BIBTEX = pbibtex
+BIBTEXFLAGS = -kanji=utf-8
+
+DOCUMENT = document
+
+LaTeXDocument($(DOCUMENT), $(DOCUMENT))
+
+.DEFAULT: $(DOCUMENT).pdf
+
